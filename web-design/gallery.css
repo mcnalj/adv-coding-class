@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #dddddd;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    margin-right: 20px;
+}
+/* li {
+    
+    float: left;
+    background-color: #dddddd;
+} */
+
+/* a {
+    display: block;
+    padding: 8px;
+}   */
+
+header {
+    background-color: black;
+    color:aliceblue;
+    text-align: center;
+    font-size: 2em;
+    padding: 3%;
+}
+
+div.gallery {
+    margin: 25px;
+    border: 5px solid orange;
+    float: left;
+    width: 400px;
+  }
+  
+  div.gallery:hover {
+    border: 10px solid orangered;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    color:aliceblue; 
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8em;
+  }

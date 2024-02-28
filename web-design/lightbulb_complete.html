@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Button</title>
+        <link rel="stylesheet" href="lightbulb.css">
+		<style>
+
+		</style>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            
+            });
+        </script>
+	</head>
+	<body>
+		<div>
+			<!--   Delete this comment and add the image here -->
+            <img id="bulb" src="bulb_off.png">
+			<button id="on_switch">ON</button>
+			<button id="off_switch">OFF</button>
+		</div>
+        <script>
+            const onButton = document.getElementById("on_switch");
+            onButton.addEventListener("click", turnOn);
+            const offButton = document.getElementById("off_switch");
+            offButton.addEventListener("click", turnOff);
+            function turnOn() {
+                document.getElementById("bulb").src="bulb_on.png"
+                document.getElementById("on_switch").style.backgroundColor = "lightGray";
+                document.getElementById("off_switch").style.backgroundColor = "red";					
+            }
+            function turnOff() {
+                document.getElementById("bulb").src="bulb_off.png"
+                document.getElementById("off_switch").style.backgroundColor = "lightGray";
+                document.getElementById("on_switch").style.backgroundColor = "green";					
+		
+            }
+        </script>
+	</body>
+</html>	

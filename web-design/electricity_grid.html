@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Button</title>
+        <link rel="stylesheet" href="electricity_grid.css">
+		<style>
+
+		</style>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            
+            });
+        </script>
+	</head>
+	<body>
+        <header>
+            <h1> Electricity: A Demonstration of CSS Grid</h1>
+        </header>
+		<div class="container">
+            <div id="image-column">
+                <img id="bulb" src="bulb_off.png">
+                <button id="on_switch">ON</button>
+                <button id="off_switch">OFF</button>
+            </div>
+            <div id="explainer-column">
+                <div id="grid-explanation" class="explainer-text">
+                    <h3>CSS GRID</h3>
+                    <p>I am using CSS Grid to layout this web page</p>
+                    <p>The lightbulb and buttons are in a div that is a direct descendant of the grid-container.</p>
+                    <p>This text is in a div that is another direct descendant of the grid-container.</p>
+                </div>
+                <div id="electricity-explanation" class="explainer-text">
+                    <h3>ELECTRICITY</h3>
+                    <p>Everytime you turn on a lightbult you use electricity.</p>
+                    <p>Some of our electricity is produced by coal-fired power plants.</p>
+                    <p>Using a 60 watt lightbulb for 2 hours per day will require 12 kilowatt hours of electricty.</p>
+                </div>
+            </div>
+		</div>
+        <div id="plant-gallery">
+            <img id="item-1" class="gallery-item" src="coal_plant.jpg">
+            <img id="item-2" class="gallery-item" src="gas_plant.jpeg">
+            <img id="item-3" class="gallery-item" src="hydro_plant.jpeg">
+            <img id="item-4" class="gallery-item" src="solar_plant.jpeg">
+            <img id="item-5" class="gallery-item" src="nuclear_plant.jpeg">
+            <img id="item-6" class="gallery-item" src="tidal_plant.jpeg">
+            <img id="item-7" class="gallery-item" src="wind_plant.jpeg">
+        </div>
+        <script>
+            const onButton = document.getElementById("on_switch");
+            onButton.addEventListener("click", turnOn);
+            const offButton = document.getElementById("off_switch");
+            offButton.addEventListener("click", turnOff);
+            function turnOn() {
+                document.getElementById("bulb").src="bulb_on.png"
+                document.getElementById("on_switch").style.backgroundColor = "lightGray";
+                document.getElementById("off_switch").style.backgroundColor = "red";					
+            }
+            function turnOff() {
+                document.getElementById("bulb").src="bulb_off.png"
+                document.getElementById("off_switch").style.backgroundColor = "lightGray";
+                document.getElementById("on_switch").style.backgroundColor = "green";					
+		
+            }
+        </script>
+	</body>
+</html>	

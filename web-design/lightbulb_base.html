@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lightbult</title>
+        <link rel="stylesheet" href="lightbulb.css">
+	</head>
+	<body>
+		<div>
+            <img id="bulb" src="bulb_off.png">
+			<button id="on_switch">ON</button>
+			<button id="off_switch">OFF</button>
+		</div>
+		<script>
+			const onButton = document.getElementById("on_switch");
+			onButton.addEventListener("mouseover", turnOn);
+
+			function turnOn() {
+				document.getElementById("bulb").src = "bulb_on.png"
+			}
+		</script>
+	</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
+	const onButton = document.getElementById("on_switch");
+	onButton.addEventListener("click", turnOn);
+
+	function turnOn() {
+		document.getElementById("bulb").src="bulb_on.png"
+	}
+</script> -->
+
+
+<!-- 
+<script>
+	const onButton = document.getElementById("on_switch");
+	onButton.addEventListener("click", turnOn);
+
+	function turnOn() {
+		document.getElementById("bulb").src="bulb_on.png"
+	}
+</script> -->

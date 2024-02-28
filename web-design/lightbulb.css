@@ -1,0 +1,25 @@
+#bulb {
+    display: block;
+    margin: auto;
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    width: 200px;
+    height:90px;
+    color: white;
+    font-size: 26px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+button {
+    background-color: green;
+}
+
+#off_switch {
+    background-color: red;
+}

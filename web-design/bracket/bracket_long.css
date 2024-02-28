@@ -1,0 +1,217 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+#east-bracket {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(42, 2.3vh);
+    background-color: lightgoldenrodyellow;
+    max-width: 600px;
+    min-height: 800px;
+    padding: 1%;
+}
+
+#testContainer {
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-bottom: 200px;
+    margin-top: 2%;
+    margin-left: 2%;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: solid 1px lightgray;
+    color: rgb(80, 80, 80);
+}
+#seeding {
+    grid-column: 1 / 2;
+    font-size: 0.7em;
+    align-self:first baseline;
+}
+
+#logoDiv {
+    grid-column: 2 / 4;
+    display: grid;
+    align-items: center;
+    padding: 5%;
+}
+
+#testLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#testName {
+    grid-column: 4 / 9;
+    text-align: left;
+    padding: 5%;
+}
+
+#testScore {
+    grid-column: 10 / 11;
+    background-color: gainsboro;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.team {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+
+.teamLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#firstSeed {
+    grid-area: 1 / 1 / 5 / 11;
+}
+#eighthSeed {
+    grid-area: 5 / 1 / 9 / 11;
+    background-color: blue;
+}
+
+#topDownBracketLine {
+    grid-area: 5 / 11 / 6 / 17;
+    border-top: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+#fourthSeed {
+    grid-area: 11 / 1 / 15 / 11;
+    background-color: red;
+}
+
+#fifthSeed {
+    grid-area: 15 / 1 / 19 / 11;
+    background-color: blue;
+}
+
+#topUpBracketLine {
+    grid-area: 14 / 11 / 15 / 17;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+
+#thirdSeed {
+    grid-area: 23 / 1 / 27 / 11;
+    background-color: red;
+}
+
+#sixthSeed {
+    grid-area: 27 / 1 / 31 / 11;
+    background-color: blue;
+}
+
+#bottomDownBracketLine {
+    grid-area: 27 / 11 / 28 / 17;
+    border-top: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+
+#secondSeed {
+    grid-area: 33 / 1 / 37 / 11;
+    background-color: red;
+}
+
+#seventhSeed {
+    grid-area: 37 / 1 / 41 / 11;
+    background-color: blue;
+}
+
+#bottomUpBracketLine {
+    grid-area: 36 / 11 / 37 / 17;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+#firstEighthWinner {
+    grid-area: 6 / 12 / 10 / 22;
+    background-color: red;
+}
+
+#fourthFifthWinner {
+    grid-area: 10 / 12 / 14 / 22;
+    background-color: blue;
+}
+
+#finalistDownBracketLine {
+    grid-area: 10 / 22 / 17 / 23;
+    border-top: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+#thirdSixthWinner {
+    grid-area: 28 / 12 / 32 / 22;
+    background-color: red;
+}
+
+#secondSeventhWinner {
+    grid-area: 32 / 12 / 36 / 22;
+    background-color: blue;
+}
+
+#finalistUpBracketLine {
+    grid-area: 25 / 22 / 32 / 23;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid #000; 
+}
+
+
+#firstFinalist {
+    grid-area: 17 / 18 / 21 / 28;
+    background-color: red;
+}
+
+#secondFinalist {
+    grid-area: 21 / 18 / 25 / 28;
+    background-color: blue;
+}
+
+#team-gallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+
+.division-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+#east-gallery {
+    background-color: lightGray;
+}
+#west-gallery {
+    background-color: gray;
+}
+
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dragDrop {
+    width: 100px;
+    height: 35px;
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+

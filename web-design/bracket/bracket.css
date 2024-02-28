@@ -1,0 +1,147 @@
+/* header {
+    padding: 1%;
+}
+
+h1 {
+    text-align: center;
+    color:rgb(55, 55, 170);
+} */
+
+#bracket {
+    display: grid;
+    grid-template-columns: 42% 16% 42%;
+    background-color: blue;
+    font-size: 2em;
+}
+
+#east-bracket {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(12, 100px);
+    grid-gap: 2px;
+    background-color: lightgoldenrodyellow;
+}
+
+#championship-bracket {
+    background-color: lightGray;
+}
+
+#west-bracket {
+    grid-column: 3 / 4;
+    background-color: lightskyblue;
+}
+
+.team {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: white;
+    border: solid 5px lightcyan;
+}
+
+#firstSeed {
+    grid-area: 1 / 1 / 2 / 11;
+    background-color: red;
+}
+
+#eighthSeed {
+    grid-area: 2 / 1 / 3 / 11;
+    background-color: blue;
+}
+
+#fourthSeed {
+    grid-area: 4 / 1 / 5 / 11;
+    background-color: red;
+}
+
+#fifthSeed {
+    grid-area: 5 / 1 / 6 / 11;
+    background-color: blue;
+}
+
+#thirdSeed {
+    grid-area: 7 / 1 / 8 / 11;
+    background-color: red;
+}
+
+#sixthSeed {
+    grid-area: 8 / 1 / 9 / 11;
+    background-color: blue;
+}
+
+#secondSeed {
+    grid-area: 10 / 1 / 11 / 11;
+    background-color: red;
+}
+
+#seventhSeed {
+    grid-area: 11 / 1 / 12 / 11;
+    background-color: blue;
+}
+
+#firstEighthWinner {
+    grid-area: 2 / 12 / 3 / 22;
+    background-color: red;
+}
+
+#fourthFifthWinner {
+    grid-area: 4 / 12 / 5 / 22;
+    background-color: blue;
+}
+
+#thirdSixthWinner {
+    grid-area: 8 / 12 / 9 / 22;
+    background-color: red;
+}
+
+#secondSeventhWinner {
+    grid-area: 10 / 12 / 11 / 22;
+    background-color: blue;
+}
+
+#firstFinalist {
+    grid-area: 3 / 15 / 4 / 25;
+    background-color: red;
+}
+
+#secondFinalist {
+    grid-area: 9 / 15 / 10 / 25;
+    background-color: blue;
+}
+
+
+
+#team-gallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+
+.division-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+#east-gallery {
+    background-color: lightGray;
+}
+#west-gallery {
+    background-color: gray;
+}
+
+
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dragDrop {
+    width: 100px;
+    height: 35px;
+    margin:10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+

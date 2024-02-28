@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>NBA Bracket</title>
+        <link rel="stylesheet" href="bracket_long.css">
+	</head>
+	<body>
+        <div id="testContainer">
+            <div id="seeding">
+                <p>1</p>
+            </div>
+            <div id="logoDiv">
+                <img id="testLogo" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/200px-Boston_Celtics.svg.png" class="teamLogo">
+            </div>
+            <div id="testName">
+                <p>Boston</p>
+            </div>
+            <div id="testScore">
+                <p id="testText">0</p>
+            </div>
+        </div>    
+
+        <div id="east-bracket">
+            <figure id="firstSeed" class="team">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/200px-Boston_Celtics.svg.png" class="teamLogo">
+            </figure>
+            <figure id="eighthSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <div id="topDownBracketLine"></div>
+        
+            <figure id="fourthSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="fifthSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <div id="topUpBracketLine"></div>
+            
+            <figure id="thirdSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="sixthSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+
+            <div id="bottomDownBracketLine">
+
+            </div>
+
+            
+            <figure id="secondSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="seventhSeed" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+
+            <div id="bottomUpBracketLine">
+
+            </div>
+
+                                                                            
+            <figure id="firstEighthWinner" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="fourthFifthWinner" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+
+            <div id="finalistDownBracketLine"></div>
+            
+            <figure id="thirdSixthWinner" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="secondSeventhWinner" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+
+            <div id="finalistUpBracketLine"></div>
+            
+            <figure id="firstFinalist" class="team">
+                <img src="" class="teamLogo">
+            </figure>
+            <figure id="secondFinalist" class="team">
+                <img src="" class="teamLogo">
+            </figure>                
+        </div>                
+        <div id="team-gallery" class="league-container">
+            <div id="east-gallery" class="division-container">
+                <!-- <img id="item-1" class="gallery-item" src="">
+                <img id="item-2" class="gallery-item" src="">
+                <img id="item-3" class="gallery-item" src="">
+                <img id="item-4" class="gallery-item" src="">
+                <img id="item-5" class="gallery-item" src="">
+                <img id="item-6" class="gallery-item" src="">
+                <img id="item-7" class="gallery-item" src=""> -->
+            </div>
+            <div id="west-gallery" class="division-container">
+                <!-- <img id="item-16" class="gallery-item" src="">
+                <img id="item-17" class="gallery-item" src="">
+                <img id="item-18" class="gallery-item" src="">
+                <img id="item-19" class="gallery-item" src="">
+                <img id="item-20" class="gallery-item" src="">
+                <img id="item-21" class="gallery-item" src="">
+                <img id="item-22" class="gallery-item" src=""> -->
+            </div>
+        </div>
+        <script>
+            teamData = 
+            {
+    "1": {
+        "id": "1",
+        "Conference": "Eastern",
+        "Division": "Atlantic",
+        "Team": "Boston Celtics",
+        "Location": "Boston, Massachusetts",
+        "Arena": "TD Garden",
+        "Arena capacity": "18624.0",
+        "Year joined to the NBA": "1946.0",
+        "Championship wins": "17.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/200px-Boston_Celtics.svg.png"
+    },
+    "2": {
+        "id": "2",
+        "Conference": "Eastern",
+        "Division": "Atlantic",
+        "Team": "Brooklyn Nets",
+        "Location": "New York City, New York",
+        "Arena": "Barclays Center",
+        "Arena capacity": "17732.0",
+        "Year joined to the NBA": "1976.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Brooklyn_Nets_newlogo.svg/150px-Brooklyn_Nets_newlogo.svg.png"
+    },
+    "3": {
+        "id": "3",
+        "Conference": "Eastern",
+        "Division": "Atlantic",
+        "Team": "New York Knicks",
+        "Location": "New York City, New York",
+        "Arena": "Madison Square Garden",
+        "Arena capacity": "19812.0",
+        "Year joined to the NBA": "1946.0",
+        "Championship wins": "2.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/25/New_York_Knicks_logo.svg/200px-New_York_Knicks_logo.svg.png"
+    },
+    "4": {
+        "id": "4",
+        "Conference": "Eastern",
+        "Division": "Atlantic",
+        "Team": "Philadelphia 76ers",
+        "Location": "Philadelphia, Pennsylvania",
+        "Arena": "Wells Fargo Center",
+        "Arena capacity": "21600.0",
+        "Year joined to the NBA": "1949.0",
+        "Championship wins": "3.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Philadelphia_76ers_logo.svg/200px-Philadelphia_76ers_logo.svg.png"
+    },
+    "5": {
+        "id": "5",
+        "Conference": "Eastern",
+        "Division": "Atlantic",
+        "Team": "Toronto Raptors",
+        "Location": "Toronto, Ontario",
+        "Arena": "Scotiabank Arena",
+        "Arena capacity": "19800.0",
+        "Year joined to the NBA": "1995.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/36/Toronto_Raptors_logo.svg/200px-Toronto_Raptors_logo.svg.png"
+    },
+    "6": {
+        "id": "6",
+        "Conference": "Eastern",
+        "Division": "Central",
+        "Team": "Chicago Bulls",
+        "Location": "Chicago, Illinois",
+        "Arena": "United Center",
+        "Arena capacity": "20917.0",
+        "Year joined to the NBA": "1966.0",
+        "Championship wins": "6.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Chicago_Bulls_logo.svg/200px-Chicago_Bulls_logo.svg.png"
+    },
+    "7": {
+        "id": "7",
+        "Conference": "Eastern",
+        "Division": "Central",
+        "Team": "Cleveland Cavaliers",
+        "Location": "Cleveland, Ohio",
+        "Arena": "Rocket Mortgage FieldHouse",
+        "Arena capacity": "20562.0",
+        "Year joined to the NBA": "1970.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Cleveland_Cavaliers_logo.svg/100px-Cleveland_Cavaliers_logo.svg.png"
+    },
+    "8": {
+        "id": "8",
+        "Conference": "Eastern",
+        "Division": "Central",
+        "Team": "Detroit Pistons",
+        "Location": "Detroit, Michigan",
+        "Arena": "Little Caesars Arena",
+        "Arena capacity": "20491.0",
+        "Year joined to the NBA": "1948.0",
+        "Championship wins": "3.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pistons_logo17.svg/200px-Pistons_logo17.svg.png"
+    },
+    "9": {
+        "id": "9",
+        "Conference": "Eastern",
+        "Division": "Central",
+        "Team": "Indiana Pacers",
+        "Location": "Indianapolis, Indiana",
+        "Arena": "Bankers Life Fieldhouse",
+        "Arena capacity": "17923.0",
+        "Year joined to the NBA": "1976.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Indiana_Pacers.svg/200px-Indiana_Pacers.svg.png"
+    },
+    "10": {
+        "id": "10",
+        "Conference": "Eastern",
+        "Division": "Central",
+        "Team": "Milwaukee Bucks",
+        "Location": "Milwaukee, Wisconsin",
+        "Arena": "Fiserv Forum",
+        "Arena capacity": "18717.0",
+        "Year joined to the NBA": "1968.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/180px-Milwaukee_Bucks_logo.svg.png"
+    },
+    "11": {
+        "id": "11",
+        "Conference": "Eastern",
+        "Division": "Southeast",
+        "Team": "Atlanta Hawks",
+        "Location": "Atlanta, Georgia",
+        "Arena": "State Farm Arena",
+        "Arena capacity": "15711.0",
+        "Year joined to the NBA": "1949.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Atlanta_Hawks_logo.svg/200px-Atlanta_Hawks_logo.svg.png"
+    },
+    "12": {
+        "id": "12",
+        "Conference": "Eastern",
+        "Division": "Southeast",
+        "Team": "Charlotte Hornets",
+        "Location": "Charlotte, North Carolina",
+        "Arena": "Spectrum Center",
+        "Arena capacity": "19077.0",
+        "Year joined to the NBA": "1988.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Charlotte_Hornets_%282014%29.svg/200px-Charlotte_Hornets_%282014%29.svg.png"
+    },
+    "13": {
+        "id": "13",
+        "Conference": "Eastern",
+        "Division": "Southeast",
+        "Team": "Miami Heat",
+        "Location": "Miami, Florida",
+        "Arena": "American Airlines Arena",
+        "Arena capacity": "19600.0",
+        "Year joined to the NBA": "1988.0",
+        "Championship wins": "3.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Miami_Heat_logo.svg/200px-Miami_Heat_logo.svg.png"
+    },
+    "14": {
+        "id": "14",
+        "Conference": "Eastern",
+        "Division": "Southeast",
+        "Team": "Orlando Magic",
+        "Location": "Orlando, Florida",
+        "Arena": "Amway Center",
+        "Arena capacity": "18846.0",
+        "Year joined to the NBA": "1989.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Orlando_Magic_logo.svg/200px-Orlando_Magic_logo.svg.png"
+    },
+    "15": {
+        "id": "15",
+        "Conference": "Eastern",
+        "Division": "Southeast",
+        "Team": "Washington Wizards",
+        "Location": "Washington, D.C.",
+        "Arena": "Capital One Arena",
+        "Arena capacity": "20356.0",
+        "Year joined to the NBA": "1961.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Washington_Wizards_logo.svg/200px-Washington_Wizards_logo.svg.png"
+    },
+    "16": {
+        "id": "16",
+        "Conference": "Western",
+        "Division": "Northwest",
+        "Team": "Denver Nuggets",
+        "Location": "Denver, Colorado",
+        "Arena": "Pepsi Center",
+        "Arena capacity": "19520.0",
+        "Year joined to the NBA": "1976.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Denver_Nuggets.svg/200px-Denver_Nuggets.svg.png"
+    },
+    "17": {
+        "id": "17",
+        "Conference": "Western",
+        "Division": "Northwest",
+        "Team": "Minnesota Timberwolves",
+        "Location": "Minneapolis, Minnesota",
+        "Arena": "Target Center",
+        "Arena capacity": "19356.0",
+        "Year joined to the NBA": "1989.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/Minnesota_Timberwolves_logo.svg/200px-Minnesota_Timberwolves_logo.svg.png"
+    },
+    "18": {
+        "id": "18",
+        "Conference": "Western",
+        "Division": "Northwest",
+        "Team": "Oklahoma City Thunder",
+        "Location": "Oklahoma City, Oklahoma",
+        "Arena": "Chesapeake Energy Arena",
+        "Arena capacity": "18203.0",
+        "Year joined to the NBA": "1967.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5d/Oklahoma_City_Thunder.svg/200px-Oklahoma_City_Thunder.svg.png"
+    },
+    "19": {
+        "id": "19",
+        "Conference": "Western",
+        "Division": "Northwest",
+        "Team": "Portland Trail Blazers",
+        "Location": "Portland, Oregon",
+        "Arena": "Moda Center",
+        "Arena capacity": "19441.0",
+        "Year joined to the NBA": "1970.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/Portland_Trail_Blazers_logo.svg/220px-Portland_Trail_Blazers_logo.svg.png"
+    },
+    "20": {
+        "id": "20",
+        "Conference": "Western",
+        "Division": "Northwest",
+        "Team": "Utah Jazz",
+        "Location": "Salt Lake City, Utah",
+        "Arena": "Vivint Smart Home Arena",
+        "Arena capacity": "19911.0",
+        "Year joined to the NBA": "1974.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Utah_Jazz_logo_%282016%29.svg/200px-Utah_Jazz_logo_%282016%29.svg.png"
+    },
+    "21": {
+        "id": "21",
+        "Conference": "Western",
+        "Division": "Pacific",
+        "Team": "Golden State Warriors",
+        "Location": "San Francisco, California",
+        "Arena": "Chase Center",
+        "Arena capacity": "18064.0",
+        "Year joined to the NBA": "1946.0",
+        "Championship wins": "6.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Golden_State_Warriors_logo.svg/200px-Golden_State_Warriors_logo.svg.png"
+    },
+    "22": {
+        "id": "22",
+        "Conference": "Western",
+        "Division": "Pacific",
+        "Team": "Los Angeles Clippers",
+        "Location": "Los Angeles, California",
+        "Arena": "Staples Center",
+        "Arena capacity": "19060.0",
+        "Year joined to the NBA": "1970.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Los_Angeles_Clippers_%282015%29.svg/200px-Los_Angeles_Clippers_%282015%29.svg.png"
+    },
+    "23": {
+        "id": "23",
+        "Conference": "Western",
+        "Division": "Pacific",
+        "Team": "Los Angeles Lakers",
+        "Location": "Los Angeles, California",
+        "Arena": "Staples Center",
+        "Arena capacity": "18997.0",
+        "Year joined to the NBA": "1948.0",
+        "Championship wins": "16.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/200px-Los_Angeles_Lakers_logo.svg.png"
+    },
+    "24": {
+        "id": "24",
+        "Conference": "Western",
+        "Division": "Pacific",
+        "Team": "Phoenix Suns",
+        "Location": "Phoenix, Arizona",
+        "Arena": "Talking Stick Resort Arena",
+        "Arena capacity": "18055.0",
+        "Year joined to the NBA": "1968.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Phoenix_Suns_logo.svg/200px-Phoenix_Suns_logo.svg.png"
+    },
+    "25": {
+        "id": "25",
+        "Conference": "Western",
+        "Division": "Pacific",
+        "Team": "Sacramento Kings",
+        "Location": "Sacramento, California",
+        "Arena": "Golden 1 Center",
+        "Arena capacity": "17500.0",
+        "Year joined to the NBA": "1948.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/SacramentoKings.svg/200px-SacramentoKings.svg.png"
+    },
+    "26": {
+        "id": "26",
+        "Conference": "Western",
+        "Division": "Southwest",
+        "Team": "Dallas Mavericks",
+        "Location": "Dallas, Texas",
+        "Arena": "American Airlines Center",
+        "Arena capacity": "19200.0",
+        "Year joined to the NBA": "1980.0",
+        "Championship wins": "1.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Dallas_Mavericks_logo.svg/200px-Dallas_Mavericks_logo.svg.png"
+    },
+    "27": {
+        "id": "27",
+        "Conference": "Western",
+        "Division": "Southwest",
+        "Team": "Houston Rockets",
+        "Location": "Houston, Texas",
+        "Arena": "Toyota Center",
+        "Arena capacity": "18055.0",
+        "Year joined to the NBA": "1967.0",
+        "Championship wins": "2.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Houston_Rockets.svg/150px-Houston_Rockets.svg.png"
+    },
+    "28": {
+        "id": "28",
+        "Conference": "Western",
+        "Division": "Southwest",
+        "Team": "Memphis Grizzlies",
+        "Location": "Memphis, Tennessee",
+        "Arena": "FedExForum",
+        "Arena capacity": "18119.0",
+        "Year joined to the NBA": "1995.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Memphis_Grizzlies.svg/200px-Memphis_Grizzlies.svg.png"
+    },
+    "29": {
+        "id": "29",
+        "Conference": "Western",
+        "Division": "Southwest",
+        "Team": "New Orleans Pelicans",
+        "Location": "New Orleans, Louisiana",
+        "Arena": "Smoothie King Center",
+        "Arena capacity": "16867.0",
+        "Year joined to the NBA": "2002.0",
+        "Championship wins": "0.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/New_Orleans_Pelicans_logo.svg/200px-New_Orleans_Pelicans_logo.svg.png"
+    },
+    "30": {
+        "id": "30",
+        "Conference": "Western",
+        "Division": "Southwest",
+        "Team": "San Antonio Spurs",
+        "Location": "San Antonio, Texas",
+        "Arena": "AT&T Center",
+        "Arena capacity": "18418.0",
+        "Year joined to the NBA": "1976.0",
+        "Championship wins": "5.0",
+        "Image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/San_Antonio_Spurs.svg/200px-San_Antonio_Spurs.svg.png"
+    }
+}
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+            const parentEast = document.getElementById("east-gallery");
+            const parentWest = document.getElementById("east-gallery");
+            for (var i =1; i <= 30; i++) {
+                const node = document.createElement("figure");
+                let elemId = "item-" + i;
+                let objKey = i.toString()
+                node.id = elemId;
+                const image = document.createElement("img");
+                image.class = "gallery-item";
+                image.src = teamData[objKey].Image;
+                image.draggable = "true";
+                image.addEventListener("ondragstart", e => drag(e), false);
+                node.appendChild(image);
+                if (i<=15) {
+                    parentEast.appendChild(node);
+                } else {
+                    parentWest.appendChild(node);
+                }                
+            }
+        </script>
+	</body>
+</html>	

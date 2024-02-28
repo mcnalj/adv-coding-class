@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="quiz_template.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="news.asp">News</a></li>
+                <li><a href="contact.asp">Contact</a></li>
+                <li><a href="about.asp">About</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h2>Quiz</h2>
+            <h4>model for a basic multiple choice quiz</h4>
+        </header>
+        <content>
+            <div id="questionArea">
+                <div id="question">
+                    <p>What is the capital of Kenya?</p>
+                </div>
+                <div id="answerArea">
+                    <p id="answerA" class="answer">Dar es Salaam</p>
+                    <p id="answerB" class="answer">Nairobi</p>
+                    <p id="answerC" class="answer">Mombassa</p>
+                    <p id="answerD" class="answer">Khartoum</p>
+                    <p id="answerMessage">Correct!  </p>
+                </div>
+            </div>
+        </content>
+        <script>
+            var questionList = [
+                {
+                    question: "What is the capital of Kenya?",
+                    correctAnswer: "Nairobi",
+                    distractor1: "Dar es Salaam",
+                    distractor2: "Mobassa",
+                    distractor3: "Khartoum",
+
+                }
+            ]
+            var answerMessage = "";
+            var answer1 = document.getElementById("answerA");
+            var answer2 = document.getElementById("answerB");
+            var answer3 = document.getElementById("answerC");
+            var answer4 = document.getElementById("answerD");
+            var answerMessageContainer = document.getElementById("answerMessage");
+            answerMessageContainer.style.visibility = "hidden";
+            answer1.addEventListener("click", checkAnswer);
+            answer2.addEventListener("click", checkAnswer);
+            answer3.addEventListener("click", checkAnswer);
+            answer3.addEventListener("click", checkAnswer);
+
+            function checkAnswer() {
+                if (this.innerHTML === questionList[0].correctAnswer) {
+                    this.style.color = "green";
+                    answerMessage = "Correct!"
+                    answerMessageContainer.innerHTML = answerMessage;
+                    answerMessageContainer.style.color = "green";
+                } else {
+                    this.style.color = "red";
+                    answerMessage = "Sorry! That's not right."
+                    answerMessageContainer.innerHTML = answerMessage;
+                    answerMessageContainer.style.color = "red";
+                }
+                answerMessageContainer.style.visibility = "visible";
+            }
+        </script>
+    </body>
+</html>
