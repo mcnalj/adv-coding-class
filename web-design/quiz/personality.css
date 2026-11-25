@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color:aliceblue;
+    text-align: center;
+}
+
+nav {
+    background-color: #dddddd;
+    font-size: 2.0rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+header {
+    font-size: 2.5rem;
+    padding: 3%;
+}
+
+.answerContainer {
+    margin: 2%;
+    padding: 2%;
+    height: 25vw;
+}
+
+#questionArea {
+    color:aliceblue;
+    width: 70%;
+    margin: auto;
+    /* background-color:darkgoldenrod; */
+    padding: 2px;
+}
+
+#question {
+    font-size: 4rem;
+    margin: 3%;
+}
+
+#answerArea {
+    font-size: 3rem;
+    margin: 2%;
+}
+
+#answerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10%;
+}
+
+.answerSquare {
+    width: 100%;
+    margin: auto;
+    display: grid;
+}
+
+#leftContainer {
+    background-color: green;
+    border: solid 4px lightGray;
+}
+
+#leftContainer:hover {
+    border-color:white;
+}
+
+#rightContainer {
+    background-color: blue;
+    border: solid 4px lightGray;
+}
+
+#rightContainer:hover {
+    border-color:white;
+}
+
+.answer {
+    margin: 2%;
+}
+
+#answerMessage {
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+#submitButton {
+    background-color: green;
+    padding: 1.7%;
+    font-size: 0.7em;
+    color: white;
+    border-radius: 5%;
+    border: solid 3px lightgray;
+}
+
+#submitButton:hover {
+    border-color: white;
+}
+
+

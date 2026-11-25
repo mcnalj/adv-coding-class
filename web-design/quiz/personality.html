@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="personality.css">
+        <script src="https://kit.fontawesome.com/b50986a084.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h2>Which Portland Pizza restaurant are you?</h2>
+        </header>
+        <content>
+            <div id="questionArea">
+                <div id="question">
+                    <p id="questionText"></p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div id="answerArea">
+                    <div id="answerContainer">
+                        <div id="leftContainer" class="answerSquare">
+                            <p id="leftAnswer" class="answer"></p>
+                        </div>
+                        <div id="rightContainer" class="answerSquare">
+                            <p id="rightAnswer" class="answer"></p>
+                        </div>
+                    </div>
+                    <p id="answerMessage">Correct!  </p>
+                    <button id="submitButton">SUBMIT</button>
+                </div>
+            </div>
+        </content>
+        <script>
+            var questionList = [
+                {
+                    question: "Are you locally grown or known nation-wide?",
+                    leftAnswer: "locally grown",
+                    rightAnswer: "known nation-wide",
+                },
+                {
+                    question: "Do you roll thick and heavy or crisp and light?",
+                    leftAnswer: "thick",
+                    rightAnswer: "crispy",
+                },
+                {
+                    question: "Do you keep it simple and traditional or do you like to stir it up and think out of the box?",
+                    leftAnswer: "traditional",
+                    rightAnswer: "out of the box",
+                },                                
+
+            ]
+            var count = 0;
+            
+            var leftAnswer = document.getElementById("leftAnswer");
+            var rightAnswer = document.getElementById("rightAnswer");
+            var questionText = document.getElementById("questionText");
+            var submitButton = document.getElementById("submitButton");
+            var selectedChoice = "";
+            var selectionArray = [];
+
+            leftAnswer.innerHTML = questionList[count].leftAnswer;
+            rightAnswer.innerHTML = questionList[count].rightAnswer;
+            questionText.innerHTML = questionList[count].question;
+            submitButton.addEventListener("click", nextQuestion);
+
+            
+            var answerMessageContainer = document.getElementById("answerMessage");
+            answerMessageContainer.style.visibility = "hidden";
+            leftAnswer.addEventListener("click", registerAnswer);
+            rightAnswer.addEventListener("click", registerAnswer);
+
+            function registerAnswer() {
+                let targetDiv = document.getElementById("leftContainer");
+                targetDiv.style.borderColor = "green";
+                selectedChoice = this.innerHTML;
+                console.log(selectedChoice);
+            }
+
+            function nextQuestion(){
+                selectionArray.push(selectedChoice);
+                count = count + 1;
+                leftAnswer.innerHTML = questionList[count].leftAnswer;
+                rightAnswer.innerHTML = questionList[count].rightAnswer;
+                questionText.innerHTML = questionList[count].question;
+            }
+        </script>
+    </body>
+</html>

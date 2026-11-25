@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 24px;
+    background-color: azure;
+}
+header {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 1%;
+    background-color: aqua;
+}
+
+.linkContainer {
+    margin: 5%;
+}
+
+#links {
+    width: 60%;
+    margin: auto;
+    padding: 1%;
+    color:whitesmoke;
+    text-align: center;
+    background-color: darkblue;
+    font-size: 1.2rem;
+}
+
+#wordLink {
+    text-decoration: none;
+}
+
+#wordLink:hover {
+    text-decoration: underline;
+}
+
+#wordLink:visited {
+    color: lightcyan;
+    text-decoration: none;
+}
+
+img {
+    width: 500px;
+    border: solid 3px gray;
+}
+
+img:hover {
+    border: solid 6px whitesmoke;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    font-size: 1rem;
+    border-radius: 5%;
+    color: whitesmoke;
+    border: solid 3px gray;
+}
+
+button:hover {
+    border: solid 4px whitesmoke;
+}
+
+
